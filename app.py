@@ -1,5 +1,9 @@
 from flask import Flask
+from views import routes_api
+
 app = Flask(__name__)
+
+app.register_blueprint(routes_api)
 
 @app.route('/')
 def hello():
